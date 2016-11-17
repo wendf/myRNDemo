@@ -19,7 +19,10 @@ import {
     return (
       <View style={styles.flexContainer} >
         <Text style={styles.text}>
-          你好啊，呵\啊a  a a 呵
+          你好啊，呵\啊a  a a 呵a
+
+
+          
         </Text>
       {/*  <Text style={styles.text}>
           2
