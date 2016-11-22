@@ -11,7 +11,7 @@ import {
   Text,
   View,
   Image
-  
+
 } from 'react-native';
 
  class myRNDemo extends Component {
