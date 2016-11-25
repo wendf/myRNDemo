@@ -47,8 +47,8 @@ class HomeScene extends Component{
                 <TouchableOpacity onPress={this.onPress.bind(this)}>
                     <Text>欢迎使用NavigatorIOS Demo. 点击导航!</Text>
                 </TouchableOpacity>
-                <TouchableOpacity [styles.textinput, onPress={this.textinput.bind(this)}]>
-                    <Text>点击进入TextInput</Text>
+                <TouchableOpacity onPress={this.textinput.bind(this)}>
+                    <Text style = {styles.textinput}>点击进入TextInput</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
         padding: 10,
         paddingTop: 74,
         flex: 1
-    }
+    },
     textinput: {
-      paddingTop:10,
+      paddingTop:50,
     }
 });
 // export default root;
