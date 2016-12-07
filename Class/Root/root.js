@@ -17,6 +17,7 @@ import {
 
 import view1 from '../components/view1';
 import textInput from '../components/textInput';
+import firstImage from '../components/firstImage';
 
 class root extends Component{
   render(){
@@ -41,14 +42,23 @@ class HomeScene extends Component{
       component: textInput
     });
   }
+  imageClick(){
+    this.props.navigator.push({
+      title: 'Image',
+      component: firstImage
+    });
+  }
     render() {
         return (
             <View style={[styles.scene, {backgroundColor: '#DAF6FF'}]}>
                 <TouchableOpacity onPress={this.onPress.bind(this)}>
                     <Text>欢迎使用NavigatorIOS Demo. 点击导航!</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={this.textinput.bind(this)}>
-                    <Text style = {styles.textinput}>点击进入TextInput</Text>
+                <TouchableOpacity onPress={this.textinput.bind(this)} style = {styles.textinput}>
+                    <Text >点击进入TextInput</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={this.imageClick.bind(this)} style = {styles.textinput}>
+                    <Text >点击进入Image</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -67,7 +77,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     textinput: {
-      paddingTop:50,
+      marginTop:20,
     }
 });
 // export default root;
