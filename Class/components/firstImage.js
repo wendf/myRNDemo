@@ -12,6 +12,8 @@ import {
 class firstImage extends Component {
   render(){
     return(
+
+      
       <View style={styles.view}>
             <Image style = {styles.image} source = {require('../../images/food.jpg')}/>
             <Image
